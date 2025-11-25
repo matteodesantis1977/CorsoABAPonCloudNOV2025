@@ -1,0 +1,5 @@
+CLASS zbp_i_biglietto_mds DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_biglietto_mds.
+ENDCLASS.
+
+CLASS zbp_i_biglietto_mds IMPLEMENTATION.
+ENDCLASS.

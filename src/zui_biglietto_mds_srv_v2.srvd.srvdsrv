@@ -1,0 +1,4 @@
+@EndUserText.label: 'Servizio per biglietto'
+define service ZUI_BIGLIETTO_MDS_SRV_V2 {
+  expose ZC_BIGLIETTI_MDS;
+}
