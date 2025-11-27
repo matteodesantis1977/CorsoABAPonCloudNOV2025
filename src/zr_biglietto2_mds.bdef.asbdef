@@ -14,6 +14,9 @@ early numbering
 //  field ( mandatory : create )
 //   IdBiglietto;
 
+  field ( features : instance )
+  Stato;
+
   field ( readonly )
    CreatoDa,
    CreatoA,
@@ -25,8 +28,8 @@ early numbering
   field ( readonly )
    IdBiglietto;
 
-
-  create;
+  create { default function GetDefaultsForCreate; }
+//  create;
   update;
   delete;
 
@@ -34,7 +37,14 @@ early numbering
   draft action Discard;
   draft action Edit;
   draft action Resume;
-  draft determine action Prepare;
+  draft determine action Prepare { validation CheckStatus; }
+
+//  action CustomDelete result [1] $self;
+  action ( features: instance ) CustomDelete result [1] $self;
+
+  determination onSave on save { create; }
+
+  validation CheckStatus on save { field Stato; }
 
   mapping for ZBIGLIETTO2_MDS corresponding extensible
   {
@@ -44,6 +54,7 @@ early numbering
     ModificatoDa = modificato_da;
     ModificatoA = modificato_a;
     Locallastchanged = locallastchanged;
+    Stato = stato;
   }
 
 }

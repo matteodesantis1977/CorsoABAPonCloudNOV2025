@@ -3,7 +3,7 @@
 @ObjectModel.sapObjectNodeType.name: 'ZBIGLIETTO2_MDS'
 @EndUserText.label: '###GENERATED Core Data Service Entity'
 define root view entity ZR_BIGLIETTO2_MDS
-  as select from ZBIGLIETTO2_MDS as Biglietto
+  as select from zbiglietto2_mds as Biglietto
 {
   key id_biglietto as IdBiglietto,
   @Semantics.user.createdBy: true
@@ -15,5 +15,6 @@ define root view entity ZR_BIGLIETTO2_MDS
   @Semantics.systemDateTime.lastChangedAt: true
   modificato_a as ModificatoA,
   @Semantics.systemDateTime.localInstanceLastChangedAt: true
-  locallastchanged as Locallastchanged
+  locallastchanged as Locallastchanged,
+  stato as Stato
 }

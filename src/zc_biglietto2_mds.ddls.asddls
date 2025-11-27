@@ -1,37 +1,38 @@
 @Metadata.allowExtensions: true
 @Metadata.ignorePropagatedAnnotations: true
-@Endusertext: {
-  Label: '###GENERATED Core Data Service Entity'
+@EndUserText: {
+  label: '###GENERATED Core Data Service Entity'
 }
-@Objectmodel: {
-  Sapobjectnodetype.Name: 'ZBIGLIETTO2_MDS'
+@ObjectModel: {
+  sapObjectNodeType.name: 'ZBIGLIETTO2_MDS'
 }
 @AccessControl.authorizationCheck: #MANDATORY
 define root view entity ZC_BIGLIETTO2_MDS
-  provider contract TRANSACTIONAL_QUERY
+  provider contract transactional_query
   as projection on ZR_BIGLIETTO2_MDS
-  association [1..1] to ZR_BIGLIETTO2_MDS as _BaseEntity on $projection.IDBIGLIETTO = _BaseEntity.IDBIGLIETTO
+  association [1..1] to ZR_BIGLIETTO2_MDS as _BaseEntity on $projection.IdBiglietto = _BaseEntity.IdBiglietto
 {
   key IdBiglietto,
   @Semantics: {
-    User.Createdby: true
+    user.createdBy: true
   }
   CreatoDa,
   @Semantics: {
-    Systemdatetime.Createdat: true
+    systemDateTime.createdAt: true
   }
   CreatoA,
   @Semantics: {
-    User.Lastchangedby: true
+    user.lastChangedBy: true
   }
   ModificatoDa,
   @Semantics: {
-    Systemdatetime.Lastchangedat: true
+    systemDateTime.lastChangedAt: true
   }
   ModificatoA,
   @Semantics: {
-    Systemdatetime.Localinstancelastchangedat: true
+    systemDateTime.localInstanceLastChangedAt: true
   }
   Locallastchanged,
+  Stato,
   _BaseEntity
 }

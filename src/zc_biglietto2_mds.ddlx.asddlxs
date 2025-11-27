@@ -16,11 +16,25 @@ annotate view ZC_BIGLIETTO2_MDS with
   @UI.identification: [ {
     position: 10 , 
     label: 'IdBiglietto'
-  } ]
+  },
+  {
+    position: 10,
+    type: #FOR_ACTION,
+    dataAction: 'CustomDelete',
+    label: 'Elimina (custom)'
+  }  
+   ]
   @UI.lineItem: [ {
     position: 10 , 
     label: 'IdBiglietto'
-  } ]
+  },
+  {
+    position: 10,
+    type: #FOR_ACTION,
+    dataAction: 'CustomDelete',
+    label: 'Elimina (custom)'
+  }
+   ]
   @UI.selectionField: [ {
     position: 10 
   } ]
@@ -69,6 +83,18 @@ annotate view ZC_BIGLIETTO2_MDS with
     position: 50 
   } ]
   ModificatoA;
+  
+  @EndUserText.label: 'Stato'
+  @UI.identification: [ {
+    position: 55 
+  } ]
+  @UI.lineItem: [ {
+    position: 55 
+  } ]
+  @UI.selectionField: [ {
+    position: 55 
+  } ]
+  Stato;
   
   @UI.identification: [ {
     position: 60 
