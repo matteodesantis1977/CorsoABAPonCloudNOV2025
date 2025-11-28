@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_COMPONENTI_MDS'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_COMPONENTI_MDS'
+  }
+}
+define service ZUI_COMPONENTI_MDS_O4 provider contracts odata_v4_ui {
+  expose ZC_COMPONENTI_MDS;
+}

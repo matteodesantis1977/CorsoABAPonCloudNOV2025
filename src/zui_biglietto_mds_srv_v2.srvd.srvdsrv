@@ -1,4 +1,5 @@
 @EndUserText.label: 'Servizio per biglietto'
 define service ZUI_BIGLIETTO_MDS_SRV_V2 {
-  expose ZC_BIGLIETTI_MDS;
+  expose ZC_BIGLIETTI_MDS  as Biglietti;
+  expose ZC_COMPONENTI_MDS as Componenti;
 }

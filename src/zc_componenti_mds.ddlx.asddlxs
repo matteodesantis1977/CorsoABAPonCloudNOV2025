@@ -3,62 +3,39 @@
 @UI.headerInfo.title.value: 'IdBiglietto'
 @UI.headerInfo.description.type: #STANDARD
 @UI.headerInfo.description.value: 'IdBiglietto'
-annotate view ZC_BIGLIETTO2_MDS with
+annotate view ZC_COMPONENTI_MDS with
 {
-  @EndUserText.label: 'IdBiglietto'
   @UI.facet: [ {
     label: 'General Information', 
     id: 'GeneralInfo', 
     purpose: #STANDARD, 
     position: 10 , 
     type: #IDENTIFICATION_REFERENCE
-  },
-  {
-    label: 'Componenti',
-    id: 'Componenti',
-    purpose: #STANDARD, 
-    position: 20 , 
-    type: #LINEITEM_REFERENCE,
-    targetElement: '_Componenti'
-  }  
-   ]
+  } ]
   @UI.identification: [ {
-    position: 10 , 
-    label: 'IdBiglietto'
-  },
-  {
-    position: 10,
-    type: #FOR_ACTION,
-    dataAction: 'CustomDelete',
-    label: 'Elimina (custom)'
-  }  
-   ]
+    position: 10 
+  } ]
   @UI.lineItem: [ {
-    position: 10 , 
-    label: 'IdBiglietto'
-  },
-  {
-    position: 10,
-    type: #FOR_ACTION,
-    dataAction: 'CustomDelete',
-    label: 'Elimina (custom)'
-  }
-   ]
+    position: 10 
+  } ]
   @UI.selectionField: [ {
     position: 10 
   } ]
   IdBiglietto;
   
+  @EndUserText.label: 'Progressivo'
   @UI.identification: [ {
-    position: 20 
+    position: 20 , 
+    label: 'Progressivo'
   } ]
   @UI.lineItem: [ {
-    position: 20 
+    position: 20 , 
+    label: 'Progressivo'
   } ]
   @UI.selectionField: [ {
     position: 20 
   } ]
-  CreatoDa;
+  Progressivo;
   
   @UI.identification: [ {
     position: 30 
@@ -69,7 +46,7 @@ annotate view ZC_BIGLIETTO2_MDS with
   @UI.selectionField: [ {
     position: 30 
   } ]
-  CreatoA;
+  TipoUtente;
   
   @UI.identification: [ {
     position: 40 
@@ -80,7 +57,7 @@ annotate view ZC_BIGLIETTO2_MDS with
   @UI.selectionField: [ {
     position: 40 
   } ]
-  ModificatoDa;
+  Creatoda;
   
   @UI.identification: [ {
     position: 50 
@@ -91,19 +68,7 @@ annotate view ZC_BIGLIETTO2_MDS with
   @UI.selectionField: [ {
     position: 50 
   } ]
-  ModificatoA;
-  
-  @EndUserText.label: 'Stato'
-  @UI.identification: [ {
-    position: 55 
-  } ]
-  @UI.lineItem: [ {
-    position: 55 
-  } ]
-  @UI.selectionField: [ {
-    position: 55 
-  } ]
-  Stato;
+  Creatoa;
   
   @UI.identification: [ {
     position: 60 
@@ -114,19 +79,55 @@ annotate view ZC_BIGLIETTO2_MDS with
   @UI.selectionField: [ {
     position: 60 
   } ]
-  Locallastchanged;
+  Modificatoda;
   
-  @EndUserText.label: '_BaseEntity'
   @UI.identification: [ {
-    position: 70 , 
-    label: '_BaseEntity'
+    position: 70 
   } ]
   @UI.lineItem: [ {
-    position: 70 , 
-    label: '_BaseEntity'
+    position: 70 
   } ]
   @UI.selectionField: [ {
     position: 70 
+  } ]
+  Modificatoa;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  Locallastchanged;
+  
+  @EndUserText.label: 'Stato'
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Stato'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'Stato'
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  Stato;
+  
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 100 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
   } ]
   _BaseEntity;
 }

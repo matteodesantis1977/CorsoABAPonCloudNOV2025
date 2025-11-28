@@ -57,4 +57,47 @@ early numbering
     Stato = stato;
   }
 
+  association _Componenti { create; with draft; }
+}
+
+define behavior for ZR_COMPONENTI_mds alias Componenti
+persistent table zcomponenti_mds
+extensible
+draft table zcmponenti_mds_d
+etag dependent
+lock dependent
+authorization dependent
+early numbering
+{
+//  field ( mandatory : create )
+//  IdBiglietto,
+//  Progressivo;
+
+  field ( readonly )
+  CreatoDa,
+  CreatoA,
+  ModificatoDa,
+  ModificatoA,
+  IdBiglietto,
+  Progressivo;
+
+//  field ( readonly : update )
+//  IdBiglietto,
+//  Progressivo;
+
+  update;
+  delete;
+
+  mapping for zcomponenti_mds corresponding extensible
+    {
+      IdBiglietto      = id_biglietto;
+      Progressivo      = progressivo;
+      TipoUtente       = tipo_utente;
+      CreatoDa         = creatoda;
+      CreatoA          = creatoa;
+      ModificatoDa     = modificatoda;
+      ModificatoA      = modificatoa;
+    }
+
+  association _Biglietto { with draft; }
 }

@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_COMPONENTI_MDS'
+@MappingRole: true
+define role ZC_COMPONENTI_MDS {
+  grant select on ZC_COMPONENTI_MDS
+  where INHERITING CONDITIONS FROM ENTITY ZR_COMPONENTI_MDS REPLACING { ROOT WITH _BaseEntity };
+}
